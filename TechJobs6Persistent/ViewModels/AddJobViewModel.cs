@@ -9,9 +9,11 @@ namespace TechJobs6Persistent.ViewModels
     {
         [Required(ErrorMessage = "Please add a job name.")]
         [StringLength(40, MinimumLength = 2, ErrorMessage = "Job name must be between 2 and 40 characters.")]
-        public string? Name { get; set; }
-        public int? EmployerId { get; set; }
+        public string Name { get; set; }
+        public int EmployerId { get; set; }
         public List<SelectListItem> Employers { get; set; } = [];
+        public AddJobViewModel() { }
+
         public AddJobViewModel(List<Employer> employerList) 
         { 
             foreach (Employer employer in employerList)

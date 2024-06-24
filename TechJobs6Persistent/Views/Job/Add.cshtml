@@ -5,14 +5,9 @@
 
 <form asp-controller="Job" asp-action="Add" method="post">
     <div class="form-group">
-        <label>Name</label>
-        <input class="form-control" />
-        <span></span>
-    </div>
-    <div class="form-group">
-        <label>Name</label>
-        <input class="form-control" />
-        <span></span>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-item col-4">
         <label asp-for="EmployerId">Employers</label>

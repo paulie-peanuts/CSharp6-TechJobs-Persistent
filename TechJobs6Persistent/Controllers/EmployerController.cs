@@ -67,7 +67,7 @@ namespace TechJobs6Persistent.Controllers
                 // .Include(a => a.Categories)
                 // .Include(a => a.Details)
                 // .Single(a => a.Id == artworkId);
-            return View(requestedEmployer);
+            return View("Details", requestedEmployer);
         }          
             return View("Index");
         }
